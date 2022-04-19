@@ -3,6 +3,7 @@ package com.lajospolya
 import io.micronaut.context.annotation.Executable
 import io.micronaut.data.annotation.Repository
 import io.micronaut.data.repository.PageableRepository
+import io.micronaut.transaction.annotation.TransactionalAdvice
 import io.micronaut.transaction.support.TransactionSynchronizationManager
 import jakarta.inject.Named
 import jakarta.inject.Singleton
@@ -27,12 +28,14 @@ open class ParentRepositoryProvider(
 ): RepositoryProvider<ParentRepository>(readOnlyRepository, readWriteRepository)
 
 @Repository("readonly")
+// @TransactionalAdvice("readonly")
 abstract class ParentReadOnlyRepository(
     @Named("readonly") entityManager: EntityManager,
 ): ParentRepository(entityManager)
 
 
 @Repository("default")
+// @TransactionalAdvice("default")
 abstract class ParentReadWriteRepository(
     @Named("default") entityManager: EntityManager,
 ): ParentRepository(entityManager)

@@ -37,8 +37,9 @@ An easy way to call the API is to import
 into PostMan.
 
 1. Create a resource using the `POST /entity` endpoint
-2. Fetch the entity using the `GET readOnlyExecutable/1` endpoint. This will fail.
-3. Fetch the entity using the other endpoints, they will all succeed.
+2. Fetch the entity using the `GET readOnlyExecutable/{id}` endpoint. This will fail.
+3. Fetch the entity using the `GET readOnlyEntityManager/{id}` endpoint. This will succeed, but it will fail if the repository is marked with `@TransactionalAdvice`.
+4. Fetch the entity using the other endpoints, they will all succeed.
 
 ### Implementation Details
 Notice in the `application.yml` there are two Data Source;
