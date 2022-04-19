@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "37f13457-fde4-43c1-ac99-fa821f3f4f84",
+		"name": "Micronaut Data",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Entity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/entity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"entity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Only Executable (Exception Thrown)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/readOnlyExecutable/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"readOnlyExecutable",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Read Only Executable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notReadOnlyExecutable/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notReadOnlyExecutable",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read Only Entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/readOnlyEntityManager/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"readOnlyEntityManager",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Read Only Entity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/notReadOnlyEntityManager/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"notReadOnlyEntityManager",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
